@@ -85,6 +85,7 @@
   /home/user/VirtualApp/mll/jni/XYZ/Minimap.h \
   /home/user/VirtualApp/mll/jni/XYZ/DrawESP.h \
   /home/user/VirtualApp/mll/jni/XYZ/Bypass.h \
+  /home/user/VirtualApp/mll/jni/Logger.h \
   /home/user/VirtualApp/mll/jni/DrawMenu.h \
   /home/user/VirtualApp/mll/jni/xHook/xhook.h \
   /home/user/VirtualApp/mll/jni/consolas.hpp \
@@ -174,6 +175,7 @@
 /home/user/VirtualApp/mll/jni/XYZ/Minimap.h:
 /home/user/VirtualApp/mll/jni/XYZ/DrawESP.h:
 /home/user/VirtualApp/mll/jni/XYZ/Bypass.h:
+/home/user/VirtualApp/mll/jni/Logger.h:
 /home/user/VirtualApp/mll/jni/DrawMenu.h:
 /home/user/VirtualApp/mll/jni/xHook/xhook.h:
 /home/user/VirtualApp/mll/jni/consolas.hpp:

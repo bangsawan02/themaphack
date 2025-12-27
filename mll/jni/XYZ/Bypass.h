@@ -1,5 +1,9 @@
+
+#include "Logger.h"
+
 void (*oAntiCheatReporter_StartBattle)(void *);
 void iAntiCheatReporter_StartBattle(void *thiz){
+    log_to_file("Function hooked: iAntiCheatReporter_StartBattle");
     while(true){
         return;
     }
@@ -8,6 +12,7 @@ void iAntiCheatReporter_StartBattle(void *thiz){
 
 void (*oAntiCheatReporter_OnReleaseUseSkill)(...);
 void iAntiCheatReporter_OnReleaseUseSkill(void *thiz, int skillId){
+    log_to_file("Function hooked: iAntiCheatReporter_OnReleaseUseSkill");
     if (thiz != nullptr){
 		//LOGI("Cheat Reports : %d", thiz);
 		//LOGI("Cheat Reports : %d", skillId);
@@ -18,6 +23,7 @@ void iAntiCheatReporter_OnReleaseUseSkill(void *thiz, int skillId){
 
 void (*oAntiCheatReporter_OnTryUseSkill)(void *, int, Vector3);
 void *iAntiCheatReporter_OnTryUseSkill(void *thiz, int skillId, Vector3 dir){
+    log_to_file("Function hooked: iAntiCheatReporter_OnTryUseSkill");
     if (thiz != nullptr){
 		return 0LL;
 		//LOGI("Cheat Reports2 : %d", skillId);
@@ -28,6 +34,7 @@ void *iAntiCheatReporter_OnTryUseSkill(void *thiz, int skillId, Vector3 dir){
 
 void (*oAntiCheatReporter_OnTryUseSkill2)(void *, int, int, Vector3);
 void iAntiCheatReporter_OnTryUseSkill2(void *thiz, int initSkill, int skillId, Vector3 dir){
+    log_to_file("Function hooked: iAntiCheatReporter_OnTryUseSkill2");
     if (thiz != nullptr){
 		//LOGI("Cheat Reports Init3 : %d", initSkill);
 		//LOGI("Cheat Reports3 : %d", skillId);
@@ -44,6 +51,7 @@ void iTestCase_gp_start_anti_cheat(void *thiz){
 
 float (*oDeviceUtil_GetRefreshRate)(void *);
 float iDeviceUtil_GetRefreshRate(void* thiz){
+    log_to_file("Function hooked: iDeviceUtil_GetRefreshRate");
     if (thiz != nullptr){
         return 120;
     }
@@ -52,6 +60,7 @@ float iDeviceUtil_GetRefreshRate(void* thiz){
 
 bool (*oDeviceUtil_GetIsRoot)(void *);
 bool iDeviceUtil_GetIsRoot(void *thiz){
+    log_to_file("Function hooked: iDeviceUtil_GetIsRoot");
     while(true){
         return false;
     }
@@ -290,6 +299,7 @@ void set_DisableUndeclaredEntityCheck(void *instance, bool value) {
 
 void (*oSetAntiCheatReport)(void *instance, string r);
 void iSetAntiCheatReport(void *instance, string r){
+    log_to_file("Function hooked: iSetAntiCheatReport");
 	if (instance != NULL){
 		r = "";
 	}

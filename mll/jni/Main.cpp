@@ -1,3 +1,4 @@
+
 #include <iostream>
 #include <stdio.h>
 #include <string>
@@ -82,6 +83,7 @@
 #include "XYZ/DrawESP.h"
 #include "XYZ/Bypass.h"
 #include "DrawMenu.h"
+#include "Logger.h"
 
 #undef stderr
 #undef stdout
@@ -246,6 +248,7 @@ void hideLibrary() {
 }
 
 void *main_thread(void *) {
+    log_to_file("Logging system initialized.");
     while (!m_IL2CPP) {
         m_IL2CPP = Tools::GetBaseAddress("liblogic.so");
         sleep(1);
